@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart</title>
+    <style>
+        .toggle-font{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>ShopSmart</h1>
+    <table>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/50">
+            </td>
+            <td>
+                <a href="https://www.amazon.com/Apple-iPhone-Fully-Unlocked-64GB/dp/B077578W38/ref=sr_1_1?keywords=iphone%2Bx&qid=1665408861&qu=eyJxc2MiOiI0LjY2IiwicXNhIjoiNC4wNCIsInFzcCI6IjMuMzgifQ%3D%3D&sr=8-1&th=1">
+                    IPhone X
+                </a>
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <td>
+                $800
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/50">
+            </td>
+            <td>
+                <a href="https://www.amazon.com/Apple-iPhone-11-64GB-Unlocked/dp/B07ZPKF8RG/ref=sr_1_1?keywords=iphone%2B11&qid=1665409016&qu=eyJxc2MiOiI1LjE0IiwicXNhIjoiNC40MSIsInFzcCI6IjMuNzIifQ%3D%3D&sr=8-1&th=1">
+                    IPhone 11
+                </a>
+                
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <td>
+                $800
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/50">
+            </td>
+            <td>
+                
+                <a href="https://www.amazon.com/Apple-iPhone-12-64GB-Red/dp/B09JFS5CJK/ref=sr_1_1?keywords=iphone+12&qid=1665409092&qu=eyJxc2MiOiI1LjMxIiwicXNhIjoiNS4xMCIsInFzcCI6IjQuNjgifQ%3D%3D&sr=8-1">
+                    IPhone 12
+                </a>
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <td>
+                $800
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/50">
+            </td>
+            <td>
+                <a href="https://www.amazon.co.uk/Apple-iPhone-13-128GB-Blue/dp/B09G9HQHRH/ref=asc_df_B09G9HQHRH/?tag=googshopuk-21&linkCode=df0&hvadid=547392393541&hvpos=&hvnetw=g&hvrand=18009356291280012494&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20474&hvtargid=pla-1430777985760&psc=1&th=1&psc=1">
+                    IPhone 13
+                </a>
+                
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <td>
+                $800
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/50">
+            </td>
+            <td>
+                <a href="https://www.amazon.co.uk/Apple-iPhone-14-128-GB/dp/B0BDJHR5DD/ref=asc_df_B0BDJHR5DD/?tag=googshopuk-21&linkCode=df0&hvadid=621166234518&hvpos=&hvnetw=g&hvrand=2582273071704713549&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20474&hvtargid=pla-1759770821033&psc=1&th=1&psc=1">
+                    IPhone 14
+                </a>
+                
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <td>
+                $800
+            </td>
+        </tr>
+    </table>
+
+    <textarea>
+
+    </textarea>
+
+    <footer>
+
+        <div>
+            ShopSmart.Inc
+        </div>
+        <div>
+            4526 Ashford Drive, Mc Lean, Virginia, United States
+        </div>
+    </footer>
+
+    <script>
+        function changeH1Text(){
+            document.querySelector("h1").innerText = "Bazinga!"
+        }
+
+        function toChangeBackgroundColor(){
+            document.querySelector("body").style.backgroundColor = "#745974"
+        }
+
+        function changeAddress(){
+            document.querySelector("footer > div:nth-child(2)").innerHTML = "121 Star Trek Drive"
+        }
+
+        function addClassToLinks(){
+            for(let node of document.querySelectorAll("a")){
+                node.classList.add("toggle-font")
+            }
+        }
+
+        function toggleImagesClass(){
+            for(let image of document.querySelectorAll("img")){
+                image.classList.toggle("hidden")
+            }
+        }
+
+        function setRandomColor(){
+            const color = getRandomColor();
+            for(let price of document.querySelectorAll("tr > td:nth-child(4)")){
+                price.style.color = color;
+            }
+        }
+
+        function getRandomColor(){
+            const red = Math.round(Math.random() * 255);
+            const green = Math.round(Math.random() * 255);
+            const blue = Math.round(Math.random() * 255);
+
+            return "rgb(" + red + ", " + green + ", " + blue + ")";
+        }
+
+    </script>
+</body>
+</html>
